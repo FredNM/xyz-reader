@@ -1,0 +1,59 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/card_margin"
+            tools:targetApi="lollipop">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                app:layout_scrollFlags="snap"
+                tools:targetApi="lollipop">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name" />
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/body_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:targetApi="lollipop">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:padding="@dimen/activity_rv_padding"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

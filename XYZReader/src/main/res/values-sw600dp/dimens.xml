@@ -1,0 +1,17 @@
+<resources>
+    <!-- detail -->
+    <dimen name="detail_title_text_size">42sp</dimen>
+    <dimen name="detail_body_text_size">20sp</dimen>
+    <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.3</item>
+
+    <dimen name="fab_elevation">2dp</dimen>
+    <dimen name="fab_press_translation_z">50dp</dimen>
+
+    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="card_elevation">16dp</dimen>
+    <dimen name="article_margin">24dp</dimen>
+    <dimen name="article_padding">16dp</dimen>
+    <dimen name="toolbar_height">60dp</dimen>
+    <dimen name="activity_rv_padding">8dp</dimen>
+</resources>

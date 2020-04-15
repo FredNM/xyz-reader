@@ -1,0 +1,54 @@
+buildscript {
+    repositories {
+		jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    jcenter()
+}
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        dataBinding {
+            enabled true
+        }
+    }
+}
+
+dependencies {
+    implementation "com.android.support:support-v4:$androidSupportVersion"
+    implementation "com.android.support:support-v13:$androidSupportVersion"
+    implementation "com.android.support:appcompat-v7:$androidSupportVersion"
+    implementation "com.android.support:palette-v7:$androidSupportVersion"
+    implementation "com.android.support:recyclerview-v7:$androidSupportVersion"
+    implementation "com.android.support:cardview-v7:$androidSupportVersion"
+    implementation 'com.squareup.okhttp3:okhttp:4.3.1'
+    implementation files('libs/volley.jar')
+
+    // Add by Fred NM
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+ //   implementation "com.google.android.material:material:1.1.0"
+ //   implementation "androidx.palette:palette:1.0.0"
+}
